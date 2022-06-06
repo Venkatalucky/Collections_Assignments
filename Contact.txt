@@ -1,0 +1,46 @@
+package assignments;
+
+import java.util.Map.Entry;
+import java.util.*;
+
+public class Contact 
+{
+	
+	String PhoneNumber;
+	String Name;
+	String Email;
+	Enum Gender;
+	
+	
+	
+
+
+	public static void main(String[] args) 
+	{
+		Map<String, Contact> mp = new TreeMap<String, Contact>();
+		
+		String s1 = new String("9492936748");
+		
+		String s2 = new String("9724367324");
+		
+		String s3 = new String("8465238523");
+		
+		Contact c1 = new Contact();
+		
+		Contact c2 = new Contact();
+		
+		Contact c3 = new Contact();
+		
+		mp.put(s1, c1);
+		mp.put(s2, c2);
+		mp.put(s3, c3);
+		
+		Set<Entry<String,Contact>> entrySet = mp.entrySet();
+		for(Entry<String, Contact>entry:entrySet)
+		{
+			System.out.println(entry.getKey()+"::"+entry.getValue());
+		}
+		
+	}
+
+}
